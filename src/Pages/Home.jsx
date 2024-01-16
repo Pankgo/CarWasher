@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import '../Styles/Home.css'
 import Search from "./Search";
-import UserInfo from "./UserInfo";
 
 function Home(){
   const [text , setText] = useState("")
@@ -31,8 +30,8 @@ function Home(){
     <div><img className="washimg" src="img/SAMPLE.png"/><h5> @@@</h5><h6> 어쩌구저쩌구어쩌라구</h6></div>
     <div className="bottom">
       <ul>
-      <img alt="예약" onClick={ButtonClick} className="bottomimg" src="img/reserve.png"/>
-      <img alt="홈" className="bottomimg" src="img/home.png"/>
+      <Link to = "/Reserve" className="bottomleft"><li><img alt="예약" onClick={ButtonClick} className="bottomimg" src="img/reserve.png"/></li></Link> 
+      <Link to = "/Home" className="bottomiddle"><li><img alt="홈" className="bottomimg" src="img/home.png"/></li></Link> 
       <Link to = "/Userinfo" className="bottomright"><li><img alt="계정" className="bottomimg" src="img/account.svg"/></li></Link> 
       </ul>
     </div>
