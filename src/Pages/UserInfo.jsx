@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import '../Styles/UserInfo.css'
+import '../Styles/Home.css'
 import UserName from './PtruserName';
+import BottomRouter from './BottomRouter';
 
 class UserInfo extends Component {
     render () {
       return (
-        <body>
+        <body className='main'>
         <h2>MYInfo</h2>
         <div class = "center">
           <div class = "imgcontent">
               <img class = "headuser" src="img/user1.png" alt="사용자1 아이콘" />
               <UserName></UserName>
           </div>
+          <br/>
           <div class = "admin">
               <p class = "contenthead">관리</p>
               <div class = "imgcontent">
@@ -48,6 +53,9 @@ class UserInfo extends Component {
                 <img class = "imgcss" src="img/mail.png" alt="1:1문의 아이콘" /> 
                 <p class = "imgtext">1:1 문의</p>
               </div>
+              <div className="Navi">
+                <BottomRouter/>
+             </div>
           </div> 
         </div>
         </body>
