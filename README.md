@@ -4,20 +4,14 @@ Src폴더 - Index.js(수정ㄴ) App.js, 나머지 페이지들
 
 Public - img 폴더 안에 이미지들 다때려박으셈 이미지경로 전부 "img/이미지이름" 이런식으로 해주셈
 
-페이지 만들때 메인 프레임 무조건 이거로 고정 
-안그럼 위치랑 크기 다 차이남
-
-.main{
-    margin-left: 35%;
-    margin-right: 35%;
-} 
-
 하단 버튼은 
 
-.bottom{
-    bottom: 0%;
-    margin-left: 25%;
-    margin-right: 25%;
+.Navi{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 24/01/12 
