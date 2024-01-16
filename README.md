@@ -8,11 +8,17 @@ Public - img 폴더 안에 이미지들 다때려박으셈 이미지경로 전�
 안그럼 위치랑 크기 다 차이남
 
 .main{
-    width: 360px;
-    height: 800px;
-    margin-left: 40%;
-    margin-right: 40%;
+    margin-left: 35%;
+    margin-right: 35%;
 } 
+
+하단 버튼은 
+
+.bottom{
+    bottom: 0%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
 
 24/01/12 
 메인화면 REACT로 예시본 생성 
