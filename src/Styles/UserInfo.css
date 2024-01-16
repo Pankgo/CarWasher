@@ -1,0 +1,81 @@
+@font-face { /*프로젝트 전체에 적용할 폰트*/
+    font-family: "Galaxy";
+    src: url(./Fonts/GalaxyGamePlaysKorean.ttf);
+}
+
+*{
+    font-family: "Galaxy";
+}
+
+p{
+    font-size: 18px;
+}
+
+h2{
+   margin-left : 45%;
+}
+.center{
+    margin-left: 38%;
+    position: relative;
+}
+
+/*사진 이미지 및 텍스트*/
+.headuser{
+    width: 36px;
+    height: 35px;
+}
+.imgcss{
+    margin-top : 2%;
+    margin-right : 5%;
+    margin-left : 5%;
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+}
+.imgcontent{
+    display : flex;
+    height : 40px;
+}
+.imgtext{
+    margin-top: 10px;
+}
+.contenthead{
+    margin-top : 5%;
+    margin-left : 5%;
+}
+
+
+
+/*관리*/
+.admin{
+    width: 320px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #70BEF7;
+    background: #FFF;
+    text-align: left;
+    
+}
+/*마이베스트*/
+.myBest{
+    width: 320px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 5%;
+    border: 1px solid #70BEF7;
+    background: #FFF;
+    margin-top: 20px;
+    text-align: left;
+}
+/*고객센터*/
+.userCenter{
+    margin-top : 4%;
+    width: 320px;
+    height: 180px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #70BEF7;
+    background: #FFF;
+    text-align: left;
+}
