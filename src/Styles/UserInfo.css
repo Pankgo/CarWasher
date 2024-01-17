@@ -3,20 +3,17 @@
     src: url(./Fonts/GalaxyGamePlaysKorean.ttf);
 }
 
-*{
-    font-family: "Galaxy";
-}
-
 p{
     font-size: 18px;
 }
 
 h2{
-   margin-left : 45%;
+    text-align: center;
 }
+
 .center{
-    margin-left: 38%;
-    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 /*사진 이미지 및 텍스트*/

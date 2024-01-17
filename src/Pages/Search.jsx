@@ -1,6 +1,5 @@
 import React,{ useState, useRef } from "react";
-import TEST from "./TEST";
-
+import '../Styles/Search.css'
 function Search(){
     const [text, setText] = useState("")
     const textRef = useRef("")
