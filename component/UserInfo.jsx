@@ -3,14 +3,17 @@ import '../css/UserInfo.css'
 import UserName from './PtruserName';
 
 class UserInfo extends Component {
+
     render () {
+      const { userInfo } = this.props;
+      console.log(userInfo);
       return (
         <body>
         <h2>MYInfo</h2>
         <div class = "center">
           <div class = "imgcontent">
               <img class = "headuser" src="/user1.png" alt="사용자1 아이콘" />
-              <UserName></UserName>
+              <p>안녕하세요 {userInfo?userInfo.name : "000"} 님</p>
           </div>
           <div class = "admin">
               <p class = "contenthead">관리</p>
