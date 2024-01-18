@@ -7,7 +7,7 @@ import BottomRouter from "./BottomRouter";
 
 function Home(){
   return(
-    <body>
+    <div>
     <Search/>
     <br/>
         <button className="left"><img className="nearimg" src="img/nearwash.png"/> 주변 매장 보기</button>
@@ -26,7 +26,7 @@ function Home(){
     <div className="Navi">
       <BottomRouter/>
     </div>
-    </body>
+    </div>
   )
 }
 
