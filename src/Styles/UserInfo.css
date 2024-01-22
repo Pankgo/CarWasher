@@ -76,3 +76,9 @@ h2{
     background: #FFF;
     text-align: left;
 }
+.logout{
+    float: right; /*버튼 오른쪽정렬*/
+
+    border: 0;
+    background-color: transparent;
+}

@@ -1,3 +1,15 @@
+
+24/01/18
+로그인창 구현 AccountRouter를 중계자로 사용 
+Login, UserInfo 컴포넌트에 islogin [ture or false]값을 전달 
+기초값 false, false일시 AccountRouter에서 Login 랜더, ture일시 Userinfo랜더
+지금은 로그인 버튼만 눌러도 islogin 값 ture로 바뀌게 해둠 추후에 서버 연결 하면 
+저장된 데이터와 비교해서 로그인 오류창도 만들 계획 
+
+근데 islogin값이 계속 저장되있는게 아니라 다른 페이지 갔다오면 초기화됨 
+이건 서버 연결해야될듯
+
+
 24/01/16 마감 
 검색창, 하단 네비바 컴포넌트 분리, CSS 대폭수정
 Chrome 모바일 화면을 보기 s20ultra 기준으로 적용 
