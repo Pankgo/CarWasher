@@ -6,7 +6,7 @@ function Account(){
     const [islogin, setislogin] = useState(false)
     return(
         <div>
-            {islogin ? <UserInfo setislogin={[setislogin]}/> : <Login setislogin={setislogin}/>}
+            {islogin ? <UserInfo setislogin={setislogin}/> : <Login setislogin={setislogin}/>}
         </div>
     )
 }
