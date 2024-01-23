@@ -20,6 +20,7 @@ UserInfo CSS 및 페이지 자체 일부 수정
 근데 라우터 기능은 아마 App.js 에서 메인으로 할듯? 
 추가로 진행 해봐야 할거같음
 
+
 24/01/18
 로그인창 구현 AccountRouter를 중계자로 사용 
 Login, UserInfo 컴포넌트에 islogin [ture or false]값을 전달 
