@@ -18,19 +18,23 @@
     
 
 기존의 AccountRouter파일 삭제 및 App.js 에 해당 기능 귀속 
+
 추가로 로그인 isLogin의 상태에 따라 로그인이 되어있지 않을시 Reserve 페이지 대신 Login 페이지를 띄우도록 변경 
+
 로그인 하면 정상적으로 Reserve페이지 띄움 
 
 UserInfo CSS 및 페이지 자체 일부 수정 
 
 추후 프로잭트 진행시 파일 유형별로 나눠서 저장 예정 
-기능, 페이지, 라우터로 나눔 
 
+기능, 페이지, 라우터로 나눔 
 근데 라우터 기능은 아마 App.js 에서 메인으로 할듯? 
 추가로 진행 해봐야 할거같음
 
 
+
 24/01/18
+
 로그인창 구현 AccountRouter를 중계자로 사용 
 Login, UserInfo 컴포넌트에 islogin [ture or false]값을 전달 
 기초값 false, false일시 AccountRouter에서 Login 랜더, ture일시 Userinfo랜더
