@@ -1,10 +1,28 @@
 import BottomRouter from './BottomRouter';
 import '../Styles/ReviewInfo.css';
 import React from "react";
+import { useParams} from 'react-router-dom';
+import axios from 'axios';
+import { useState} from 'react'
+
 function ReviewInfo(){
+
+    const { reviewId } = useParams();
+    const [review, setReview] = useState({});
+
+    const getReview = async () => {
+        try {
+          const result = await axios.get(`http://localhost:8080/review/${reviewId}`); 
+          setReview(result.data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+
 
 return(
     <div>
+        {console.log(reviewId)}
         <div className="all">
             <div>
                 <h1>상세리뷰관리</h1>
@@ -14,7 +32,7 @@ return(
                 <button className = "enrollImgbutton">사진 첨부</button>
             </div>
             <div>
-                <p>구분</p>
+                <p>구분 {review.name}</p>
                 <p>차량</p>
                 <p>세차업자</p>
             </div>

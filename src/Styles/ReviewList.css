@@ -16,6 +16,13 @@
 .disflex{
     display : flex;
 }
+/*링크 css*/
+.custom-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 링크 색상 지정 */
+  }
+
+
 
 /* 리뷰 이미지*/
 .reviewimg{
@@ -35,6 +42,11 @@
     margin-bottom: 5%;
     background-color: white;
     
+}
+
+.Infobox p{
+    margin : 5%;
+    margin-left : 8%;
 }
 .reviewList{
  justify-content: center;
