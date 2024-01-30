@@ -1,10 +1,11 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import BottomRouter from "../Routers/BottomRouter";
 import axios  from "axios";
-import '../Styles/Login.css'
+import '../Styles/Account.css'
 import { Link } from "react-router-dom";
+import DB from "../Middleware/Middleware";
 
-function Login({setislogin}){
+function Login({setislogin, setUID}){
     const [Id, setId] = useState("")
     const [Password, setPassword] = useState("")
 
@@ -14,37 +15,49 @@ function Login({setislogin}){
     const Passwordtype = (event) => {
         setPassword(event.target.value)
     }
-    // const LoginCheck = (event) => {
-    //     axios.get(DB)
-    //     .then((res) => {
-    //         console.log(res.data)
-    //     })
-    //     .catch((error) => {
-    //         console.log(error)
-    //     })
-    // }
 
-    const onSubmit = useCallback((event) => {
-        event.preventDefault()
+    const [result, setResult] = useState([]);
 
-        setislogin(true)
-
-        console.log('Id', Id);
-        console.log('Password', Password)
-    }, [Id,Password])
+        const logincheck = async () => {
+            try {
+              const response = await axios.get(DB);
+              console.log(response);
+              setResult(response.data);
+              console.log(result);
         
-    function toSignup(){
-      <ul><Link to = '/Signup'><li>회원가입</li></Link></ul> 
-    }
+              const Logincheck = response.data.find((item) => item.id === Id &&item.password === Password);
+              if (Logincheck === undefined) {
+                console.log("error");
+                setislogin(false);
+                alert("아이디또는 비밀번호를 확인하세요!")
+              }
+              else
+              {console.log("correct!"); setislogin(true);
+                setUID(response.data.find((item) => item.id === Id && item.name))
+            };
+            } catch (error) {
+              console.error("Error fetching data:", error);
+            }
+          };
+        
+          const handleLogin = (e) => {
+            e.preventDefault(); // 폼의 기본 동작 막기
+            logincheck();
+          };
+        
+          useEffect(() => {
+            console.log(result);
+          }, [result]);
+        
     return(
         <>
         <div className="login">
-        <form className="loginform" onSubmit={onSubmit}>
+        <form className="loginform" onSubmit={handleLogin}>
             <label>사용자 아이디</label>
             <input type="Id" value={Id} onChange={Idtype}/>
             <br/>
             <label>비밀번호</label>
-            <input type="password" value={Password} onChange={Passwordtype}/>
+            <input type="Password" value={Password} onChange={Passwordtype}/>
             <br/>
             <button>로그인</button>
         </form>
