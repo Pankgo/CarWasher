@@ -36,7 +36,7 @@ function ReviewList(){
       //필터링된 리뷰들 출력 
       const Printreviews = filteredReviews.map((review, index) => {
         return (
-          <Link to = {`/ReviewInfo/${review.reviewID}`} key={index} className = "custom-link"> 
+          <Link to = {`/ReviewInfo/${review.id}`} key={index} className = "custom-link"> 
           <div className='disflex' key={index}>
             <input type="checkbox" className='circlecheck' />
             <div className='Infobox'>
