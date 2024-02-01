@@ -1,48 +1,27 @@
 import React, { useState } from "react";
+import Popup from "../Functions/Modal";
 import Modal from "react-modal"
 import "../Styles/Reserve.css"
+import "../Styles/Modal.css"
 import '../Styles/Home.css'
 import BottomRouter from "../Routers/BottomRouter";
 
-function Reserve({setislogin, UID}){
-    const [isOpen, setIsOpen] = useState(false);
+function Reserve({setislogin, UID, setUID, modalvalue, setmodalvalue, openModal, closeModal, modalopen, modalstyle}){
 
-    const openModal = () => {
-        setIsOpen(true)
-    }
-
-    const closeModal = () => {
-        setIsOpen(false)
-    }
-
-    const modalstyle ={
-        overlay: {
-            backgroundColor: "rgba(0,0,0,0.5)"
-        },
-        content:{
-            width : "60%",
-            height : "20%",
-            margin : "auto",
-            borderRadius : "7px",
-            boxShadow : "0 2px 4px rgba(0,0,0,0.2)"
-        }
-
-    }
 return(
     <>
-        <Modal isOpen={isOpen} onRequestClose={closeModal} style = {modalstyle}>
-        <h2>입력한 메모</h2>
-        <p>메모 내용임 대충</p>
-        <button onClick={closeModal} className="memo">닫기</button>
-        </Modal>
+      <Modal isOpen={modalopen} onRequestClose={closeModal} style={modalstyle}>
+        {<Popup modalvalue={modalvalue} UID={UID} setUID={setUID} />}
+        <button onClick={closeModal} className="memo">
+          닫기
+        </button>
+      </Modal>
         <header className="base">
         <h1>{(UID.name)} 님의 예약 내역</h1>
         </header>
         <br/>
         <div className="base">
             <h3 className="title">정기 예약 내역</h3>
-            {console.log((UID))}
-            {console.log(UID.carnumber)}
             <h5 className="subtitle">{(UID.carnumber)}</h5> {/*여기에 차 번호 props로 받아와야댐 서버로부터 따로 컴포넌트 만들어서 넣을 예정*/}
         </div>
         <p>
@@ -53,7 +32,7 @@ return(
             <h5 className="inout">외부</h5>
         </button>
         <button className="date">날짜 변경</button>
-        <button className="memo" onClick={openModal}>메모보기</button>
+        <button className="memo" value={"memo"} onClick={openModal}>메모보기</button>
         </p>
         <br/><br/>
         <div className="base">
@@ -67,7 +46,7 @@ return(
             <h5 className="time">시간 : ~~~~~~~~~</h5>
             <h5 className="inout">내부</h5>
         </button>
-        <button className="memo" onClick={openModal}>메모보기</button>
+        <button className="memo" value={"memo"} onClick={openModal}>메모보기</button>
         </p>
         <br/>
         <div className="base">
@@ -81,7 +60,7 @@ return(
             <h5 className="time">시간 : ~~~~~~~~~</h5>
             <h5 className="inout">내부</h5>
         </button>
-        <button className="memo" onClick={openModal}>메모보기</button>
+        <button className="memo" value={"memo"} onClick={openModal}>메모보기</button>
         </p>
     <div className="Navi">
       <BottomRouter/>

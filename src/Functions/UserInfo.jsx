@@ -4,7 +4,7 @@ import '../Styles/UserInfo.css'
 import '../Styles/Home.css'
 import BottomRouter from '../Routers/BottomRouter';
 
-function UserInfo({setislogin, UID}){
+function UserInfo({setislogin, UID, setUID, modalvalue, setmodalvalue, openModal, closeModal, modalopen, modalstyle}){
   const Logout = () =>{
     setislogin(false)
   }
@@ -15,6 +15,7 @@ function UserInfo({setislogin, UID}){
           <div className = "imgcontent">
               <img className = "headuser" src="img/user1.png" alt="사용자1 아이콘" />
               <h2>{(UID.name)} 님 반갑습니다</h2>
+              {console.log(UID)}
           </div>
           <br/>
           <div className = "content">
