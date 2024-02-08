@@ -15,7 +15,7 @@ function ReviewInfo(){
     //해당 리뷰 가져오기
     const getReview = async () => {
         try {
-          const result = await axios.get(`http://localhost:8080/review/${reviewJson}`); 
+          const result = await axios.get(`http://localhost:3002/review/${reviewJson}`); 
           setReview(result.data);
           console.log(rating);
         } catch (error) {
@@ -25,7 +25,7 @@ function ReviewInfo(){
     //리뷰 업데이트
     const upDateReivew = async() => {
             try {
-                await axios.patch(`http://localhost:8080/review/${reviewJson}`, {
+                await axios.patch(`http://localhost:3002/review/${reviewJson}`, {
                     reviewtext: reviewtext,
                     rating : rating
                   });
@@ -69,9 +69,9 @@ return(
                     <button className = "enrollImgbutton">사진 첨부</button>
                 </div>
                 <div>
-                    <p>구분  : {review.division}</p>
-                    <p>차량 : {review.car}</p>
-                    <p>세차업자 : {review.washer}</p>
+                    <h3>구분  : {review.division}</h3>
+                    <h3>차량 : {review.car}</h3>
+                    <h3>세차업자 : {review.washer}</h3>
                 </div>
                 <div>
                     <div className="star-rating">

@@ -35,28 +35,28 @@ return(
             </div>
         </div>
     <div className='flexbox'>
-        <p>영업시간</p>
+        <h3>영업시간</h3>
         <div className='All'>
-             {centerInfo.weekdayTime ? <p>평일 {centerInfo.weekdayTime[0]}시~{centerInfo.weekdayTime[1]}시</p> 
-             : <p>평일 없음</p>}
-             {centerInfo.holiydayTime ? <p>주말 {centerInfo.holiydayTime[0]}시~{centerInfo.holiydayTime[1]}시</p> 
-             : <p>주말 없음</p>}
+             {centerInfo.weekdayTime ? <h3>평일 {centerInfo.weekdayTime[0]}시~{centerInfo.weekdayTime[1]}시</h3> 
+             : <h3>평일 없음</h3>}
+             {centerInfo.holiydayTime ? <h3>주말 {centerInfo.holiydayTime[0]}시~{centerInfo.holiydayTime[1]}시</h3> 
+             : <h3>주말 없음</h3>}
         </div>
     </div>
     <div className='flexbox'>
-        <p>휴무일</p>
-        <p className='restDateText'>{centerInfo.dayoff}</p>
+        <h3>휴무일</h3>
+        <h3 className='restDateText'>{centerInfo.dayoff}</h3>
     </div>
     <div className='flexbox'>
-        <p>전화번호</p>
-        <p className='All'>{centerInfo.phonenumber}</p>
+        <h3>전화번호</h3>
+        <h3 className='All'>{centerInfo.phonenumber}</h3>
     </div>
     <div className='flexbox'>
-        <p>위치</p>
-        <p className='locateText'>{centerInfo.place}</p>
+        <h3>위치</h3>
+        <h3 className='locateText'>{centerInfo.place}</h3>
     </div>
     <div className='currentSpotText'>
-        <p>현재 남은 자리 : {centerInfo.currentsite}</p>
+        <h3>현재 남은 자리 : {centerInfo.currentsite}</h3>
     </div>
     <div className='setCenter'>
         <button className='reservateSpotbut'>자리 예약</button>
