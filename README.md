@@ -1,3 +1,17 @@
+24/02/13
+
+ShortRequest에 시간 표시가 무조건 UTC로 나오는거 수정 
+
+이랬던거
+![1234](https://github.com/Pankgo/CarWasher/assets/147930457/06271fc1-c58e-4b82-9e39-0e37e7ed370e)
+
+이렇게 수정했음
+![결과값](https://github.com/Pankgo/CarWasher/assets/147930457/aab0d0ec-7d18-4fee-aefd-549922a4d7e4)
+
+npm install moment-timezone --save 해서 moment-timezone 설치해야 작동함
+
+제일 위에 import도 import moment from "moment-timezone"; 이걸로 수정해야되고
+
 24/02/07
 세차장 화면 및 기능 설계
 단기세차화면 화면 설계
