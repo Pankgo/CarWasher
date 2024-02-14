@@ -2,20 +2,7 @@
     font-family: "Galaxy";
     src: url(./Fonts/GalaxyGamePlaysKorean.ttf);
 }
-.All{
-    margin-left : 5%;
-}
-.Navi{
-    position: fixed;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
 
-.disflex{
-    display : flex;
-}
 /*링크 css*/
 .custom-link {
     text-decoration: none; /* 밑줄 제거 */
@@ -26,8 +13,8 @@
 
 /* 리뷰 이미지*/
 .reviewimg{
-   width: 50px;
-   height: 50px;
+   width: 13%;
+   height: 5vh;
    margin-top: 4%;
    margin-right : 2%;
 }
@@ -35,8 +22,8 @@
 /*리뷰 박스*/
 .Infobox{
     display : flex;
-    width: 280px;
-    height: 50px;
+    width: 80%;
+    height: 6vh;
     border-radius: 10px;
     border: 1px solid #70BEF7;
     margin-bottom: 5%;
@@ -54,27 +41,26 @@
 
 /*체크박스*/
 .circlecheck{
-    width: 21px;
-    height: 21px;
+    width: 5%;
+    height: 2vh;
     border-radius: 50%;
-    border: 1px solid #70BEF7;
-    margin-top: 6%;
+    margin-top: 5%;
 
 }
 /*리뷰 삭제 버튼*/
 .delbutton{
-    width: 128px;
-    height: 36px;
+    width: 35%;
+    height: 5vh;
     flex-shrink: 0;
     border-radius: 10px;
     border: 1px solid #70BEF7;
     background: #70BEF7;
     color : white;
-    margin-left : 50%
+    margin-left : 52%
 }
 /*정렬 선택 버튼*/
 .selectsortbut{
-    border : 0px;
+    border : none;
     text-align: right;
     margin-left: 65%;
 }

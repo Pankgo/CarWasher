@@ -16,14 +16,10 @@
 }
 /*세차장 이미지*/
 .washCenterImg{
-    width: 360px;
-    height : 300px;
+    width: 90%;
+    height : 35vh;
     margin: 4%;
     margin-bottom: 2%;
-}
-/*현재 자리 정보*/
-.currentSpotText{
-
 }
 
 /*자리 예약 버튼*/
@@ -31,8 +27,8 @@
     border : none;
     background-color : #70BEF7;
     border-radius: 10px;
-    width : 200px;
-    height : 50px;
+    width : 40%;
+    height : 6vh;
     color : white;
     font-size: 20px;
 }

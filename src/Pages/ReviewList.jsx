@@ -14,8 +14,11 @@ function ReviewList(){
     //사용자 리뷰 가져오는 함수
     const getReviews = async () => {
         try {
-          const result = await axios.get("http://localhost:8080/review"); 
-          setReviews(result.data);
+          const result = await axios.get("http://localhost:3002/review"); 
+          const filt = result.data.filter((review) => {
+            return review.user === 'test';
+          });
+          setReviews(filt);
         } catch (error) {
           console.error("Error fetching data:", error);
         }
@@ -37,7 +40,7 @@ function ReviewList(){
       const Printreviews = filteredReviews.map((review, index) => {
         return (
           <Link to = {`/ReviewInfo/${review.id}`} key={index} className = "custom-link"> 
-          <div className='disflex' key={index}>
+          <div className='flexbox' key={index}>
             <input type="checkbox" className='circlecheck' />
             <div className='Infobox'>
               <p>{review.washer}</p>
@@ -56,10 +59,15 @@ function ReviewList(){
       useEffect(() => {
         getReviews();
       }, []);
+
+      
+      useEffect(() => {
+        console.log(reviews)
+      }, [reviews]);
 return(
     <div>
         <div className='All'>
-            <div className='disflex'>
+            <div className='flexbox'>
                 <img className='reviewimg' src = "img/Features List.png"></img>
                 <h1>리뷰관리</h1>
             </div>

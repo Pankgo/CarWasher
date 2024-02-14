@@ -2,8 +2,8 @@
     margin-left : 5%;  
 }
 .result_img {
-    width: 360px;
-    height: 140px;
+    width: 95%;
+    height: 15vh;
 }
 /*세차 시간 및 세차 날짜 정보 박스*/
 .resultInfotext{
@@ -15,8 +15,8 @@
 
 /*요구사항 및 코멘트 박스*/
 .questbox{
-    width: 360px;
-    height: 90px;
+    width: 95%;
+    height: 10vh;
     border-radius: 5px;
     border: 1px solid #70BEF7;
     text-align: left;
@@ -28,8 +28,8 @@
 .butt,
 .butt.rewash,
 .butt.pay {
-    width: 150px;
-    height: 50px;
+    width: 40%;
+    height: 5vh;
     margin-top: 15%;
     border-radius: 10px;
     margin-left : 5%;
